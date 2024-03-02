@@ -1,9 +1,9 @@
-from Fixed import SSID, PASSWORD, TOKEN, TELEGRAMID
-from update import update
+from Fixed import SSID, PASSWORD, TOKEN, TELEGRAMID, GITURL
+from picodate import update
 import utelegram
 
 ## Check for updates
-update()
+update(GITURL, SSID, PASSWORD)
 
 #Initialization
 utelegram_config = {
