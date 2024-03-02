@@ -6,7 +6,7 @@ from picozero import LED
 from time import sleep
 
 ## Check for updates
-# update(GITURL, SSID, PASSWORD)
+update(GITURL, SSID, PASSWORD)
 
 
 ##
