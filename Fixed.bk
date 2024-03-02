@@ -1,0 +1,8 @@
+##OTA UPDATE
+GITURL = "https://raw.githubusercontent.com/NarcoticGaMe/PicoW_gab/main/"
+## WIFI
+SSID = "FASTWEB-78BC68"
+PASSWORD = "3Y9PEENTNG"
+## TELEGRAM
+TOKEN = "5817136162:AAGVLAOpJovzxWXKc9ile3srTCEPMDkIyp4"
+TELEGRAMID = "286269300"
