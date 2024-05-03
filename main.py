@@ -33,12 +33,15 @@ bot.send(TELEGRAMID, 'Bot Online')
 def get_message(message):
     bot.send(message['message']['chat']['id'], message['message']['text'].upper())
 
-def change_display(message):
+def check_update(message):
     oled.fill(0)
-    oled.text("Cambiato", 0, 40)
+    oled.text('Searching for new update ...',0,0)
+    oled.text('new update ...',0,10)
+    oled.show()
+    update(GITURL, SSID, PASSWORD)
+    oled.text('No new update',0,20)
     oled.show()
 
-
 bot.set_default_handler(get_message)
-bot.register('/comand', change_display)
+bot.register('/update', check_update)
 bot.listen()
