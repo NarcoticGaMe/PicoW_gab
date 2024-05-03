@@ -2,7 +2,7 @@ from Fixed import SSID, PASSWORD, TOKEN, TELEGRAMID, GITURL
 from picodate import update
 import utelegram
 from machine import Pin, I2C
-from ssd1306 import SSD1306_I2C
+from SSD1306 import SSD1306_I2C
 from picozero import LED
 from time import sleep
 
@@ -13,7 +13,7 @@ update(GITURL, SSID, PASSWORD)
 ##Display
 WIDTH =128 
 HEIGHT= 64
-i2c=I2C(0,scl=Pin(1),sda=Pin(0),freq=200000)
+i2c=I2C(0,scl=Pin(17),sda=Pin(16),freq=200000)
 oled = SSD1306_I2C(WIDTH,HEIGHT,i2c)
 oled.fill(0)
 oled.text("DIY PROJECTS LAB", 0, 0)
