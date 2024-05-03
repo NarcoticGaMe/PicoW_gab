@@ -42,6 +42,12 @@ def check_update(message):
     oled.text('No new update',0,20)
     oled.show()
 
+def change_display(message):
+    oled.rect(0,40,WIDTH,8)
+    oled.text('Cambiato',0,40)
+    oled.show()
+
 bot.set_default_handler(get_message)
 bot.register('/update', check_update)
+bot.register('/change', change_display)
 bot.listen()
