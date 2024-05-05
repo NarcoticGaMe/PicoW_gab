@@ -3,7 +3,7 @@ from picodate import update
 import utelegram
 from machine import Pin, I2C
 from SSD1306 import SSD1306_I2C
-from picozero import LED
+# from picozero import LED
 from time import sleep
 
 ## Check for updates
@@ -43,7 +43,7 @@ def check_update(message):
     oled.show()
 
 def change_display(message):
-    oled.rect(0,40,WIDTH,8)
+    oled.rect(0,40,WIDTH,8,0,True)
     oled.text('Cambiato',0,40)
     oled.show()
 
